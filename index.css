@@ -1,0 +1,164 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: #2f343b;
+  color: #fff;
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+/*
+main {
+  width: 80vh;
+  margin: 15px;
+  padding: 10px;
+  text-align: center;
+  font-family: arial;
+  background-color: rgba(5, 223, 252, 0.123);
+  border-radius: 5px;
+}
+*/
+/* header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+} */
+
+.text-secondary {
+  color: #030303;
+}
+
+main {
+  padding: 0.5rem;
+  min-height: calc(80vh - 60px);
+  border: 2px solid red;
+}
+
+main#home {
+  overflow: hidden;
+}
+main#home h1 {
+  margin-top: 15vh;
+}
+
+body#bg-img {
+  background: url(img/background.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+}
+body#bg-img:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: rgba(47, 52, 59, 0.9);
+}
+h1 {
+  margin: 0;
+  font-weight: 400;
+}
+h1.lg-heading {
+  font-size: 4rem;
+}
+h1.sm-heading {
+  margin-bottom: 2rem;
+  padding: 0.2rem 1rem;
+  background: rgba(52, 57, 65, 0.5);
+}
+
+#myTextArea {
+  font-size: 1.2rem;
+}
+button {
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 150px;
+}
+.btn,
+.btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+}
+.btn:hover,
+.btn-light:hover {
+  background: #030303;
+  color: #fff;
+}
+
+.btn-light {
+  background: #acb3bd;
+  color: #333;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center;
+  }
+  main .lg-heading {
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0;
+  }
+  ul.menu-nav.show,
+  div.menu-branding.show {
+    transform: translate3d(0, 0, 0);
+  }
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px;
+  }
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0);
+  }
+  .menu-branding .portrait {
+    background: url("../img/portrait_small.jpg");
+    width: 150px;
+    height: 150px;
+  }
+  .about-info {
+    grid-template-areas:
+      "bioimage"
+      "bio"
+      "skill1"
+      "skill2"
+      "skill3";
+    grid-template-columns: 1fr;
+  }
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    padding: 2rem;
+  }
+  main #home h1 {
+    margin-top: 10vh;
+  }
+  main .lg-heading {
+    margin-top: 1rem;
+    font-size: 5rem;
+  }
+  .projects {
+    grid-template-columns: 1fr;
+  }
+}
