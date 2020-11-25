@@ -104,10 +104,13 @@ button {
 	background: #acb3bd;
 	color: #333;
 }
-
-footer {
+a {
 	color: #fff;
+	text-decoration: none;
+}
+footer {
 	align-items: center;
+	text-align: center;
 }
 
 @media screen and (max-width: 768px) {
